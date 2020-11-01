@@ -5,13 +5,11 @@
  <img src="toplogo.png" class="toplogo-image">
  </div>
 
-<div class="top-comment">
-  <div class="ribbon6">
-   <h4>あなたのオススメの薬をシェアしよう</h4>
- </div>
+<div class="ribbon10">
+  <h3>オススメの薬をシェアしよう！</h3>
+</div>
 
 <div>
-  <p>【メールアドレス】 <%= post.user.email %></p>
   <p>【内容】 <%= post.content %></p>
   <p id="post-<%= post.id %>">
     <% if @liked_post_ids.include?(post.id) %>
