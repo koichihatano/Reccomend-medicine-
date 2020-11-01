@@ -1,3 +1,15 @@
+<div class="container">
+ <div class="row">
+
+<div class="toplogo">
+ <img src="toplogo.png" class="toplogo-image">
+ </div>
+
+<div class="top-comment">
+  <div class="ribbon6">
+   <h4>あなたのオススメの薬をシェアしよう</h4>
+ </div>
+
 <div>
   <p>【メールアドレス】 <%= post.user.email %></p>
   <p>【内容】 <%= post.content %></p>
@@ -8,6 +20,7 @@
       <%= render "dislike", post: post %>
     <% end %>
   </p>
+ </div>
   <p>
     <%= link_to "詳細", post %>
     <% if current_user.id == post.user.id %>
@@ -15,5 +28,6 @@
       <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか？" } %>
     <% end %>
   </p>
+ 
+ </div>
 </div>
-<hr>
