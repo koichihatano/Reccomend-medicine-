@@ -1,0 +1,9 @@
+<%= form_with model: @post, local: true do |form| %>
+  <%= form.label :content %>
+  <%= form.text_field :content, required: true %>
+  <%= attachment_image_tag @user, :toplogo_image, :fill, 60, 60, fallback: "no_image.jpg"%>
+ProfileImage
+<%= f.attachment_field :toplogo_image, placeholder: "トップ画像" %>
+<%= f.submit "保存" %>
+  <%= form.submit "送信" %>
+<% end %>
