@@ -1,14 +1,14 @@
-<header>
-  <nav class="navbar navbar-light " style="background-color: #67b5b7;">
-<% if user_signed_in? %>
+ <ul class="top-right">
+  <header>
+ <% if user_signed_in? %>
+  <%= link_to "新規投稿ページ", new_post_path %>
+  <%= link_to "一覧ページ", root_path %>
   <%= link_to "アカウント編集", edit_user_registration_path %>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <%= link_to "一覧ページ", root_path %>
-  <%= link_to "新規投稿ページ", new_post_path %>
   <%= "【ログイン中のアドレス】#{current_user.email}" %>
 <% else %>
   <%= link_to "新規登録", new_user_registration_path %>
   <%= link_to "ログイン", new_user_session_path %>
-<% end %>
-  </nav>
- </header>
+ <% end %>
+  </header>
+ </ul>

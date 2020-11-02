@@ -168,7 +168,7 @@ li {
 }
 
 .top-message {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 10px 5px 5px 5px;
     color: rgb(57, 21, 115);
@@ -204,12 +204,12 @@ li {
 }
 
 .toplogo img {
-    width: 420px;
+    width: 500px;
 }
 
 .top-image img {
     width: 100%;
-    max-height: 500px;
+    max-height: 600px;
     object-fit: cover;
     opacity: 0.9;
 }
@@ -326,19 +326,6 @@ li {
 
 .information {
     margin-top: 10px;
-}
-
-.left-container {
-    float: left;
-    margin-top: 20px;
-}
-
-.right-container {
-    float: right;
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 14px;
 }
 
 
@@ -490,3 +477,5 @@ footer li {
 .font {
     font-size: 40px;
 }
+
+.card-deck {}

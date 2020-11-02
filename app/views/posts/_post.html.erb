@@ -1,32 +1,20 @@
-<div class="container">
- <div class="row">
-
-
 <div>
-  <%# app/assets/images %>
-  <%= image_tag "toplogo.png", alt: "トップ画面ロゴ", id: "assets", class: "image", width: "300px" %>
-</div>
-<div class="ribbon10">
-  <h3>オススメの薬をシェアしよう！</h3>
-</div>
-
-<div>
-  <p>【内容】 <%= post.content %></p>
-  <p id="post-<%= post.id %>">
+<div class="card border-primary mb-3" style="max-width: 50rem;">
+  <div class="card-header"><p>【内容】 <%= post.content %></p>
+   <p id="post-<%= post.id %>"></p>
     <% if @liked_post_ids.include?(post.id) %>
       <%= render "like", post: post %>
     <% else %>
       <%= render "dislike", post: post %>
     <% end %>
-  </p>
- </div>
-  <p>
+    <p>
     <%= link_to "詳細", post %>
     <% if current_user.id == post.user.id %>
       <%= link_to "編集", edit_post_path(post) %>
       <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか？" } %>
     <% end %>
-  </p>
- 
+  </p></div>
  </div>
 </div>
+ 
+

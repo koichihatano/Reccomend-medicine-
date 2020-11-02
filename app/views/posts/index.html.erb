@@ -1,2 +1,20 @@
-<h4>投稿一覧</h4>
-<%= render @posts %>
+
+<div class="top-comment">
+ <div class="ribbon10">
+  <h3>オススメの薬をシェアしよう！</h3>
+ </div>
+ <div class="box16">
+  <p>いつも飲む風邪薬や<br>頭痛薬<br>目薬等<br>なんでもOK！</p>
+ </div>
+ <div class="new-post">
+ <%= link_to("オススメの薬を投稿",new_post_path, {class: "btn-gradient-3d-simple"}) %>
+ </div>
+ </div>
+<div class="container">
+ <div class="row">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+</div>
+ </div>
+  </div>
+
+ <%= render @posts %>

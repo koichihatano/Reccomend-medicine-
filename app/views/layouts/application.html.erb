@@ -11,15 +11,26 @@
   </head>
 
   <body>
-    <div class="top-wrapper">
-      <div class="top-message flex space">
-          <ul class="top-right">
-
+  <div class="top-wrapper">
+  <div class="top-message flex space">
+  <div class="top-left">
+    <% current_user = User.find_by(id: session[:user_id]) %>
+    <% if current_user %>
+      <p class="smile">こんにちは、<%= link_to("/users/#{current_user.id}/show",{class: "current-user"}) do %>
+      <%= current_user.name %>
+      <% end %>さん！</p>
+    <% else %><p class="smile">こんにちは、ゲストさん！</p>
+    <% end %>
     <header>
       <%= render "layouts/header" %>
-
     </header>
-    <hr>
+    <div>
+      <%# app/assets/images %>
+      <%= image_tag "toplogo.png", alt: "トップ画面ロゴ", id: "assets", class: "image", width: "800px" %>
+    </div>
     <%= yield %>
+    </div>
+   </div>
+  </div>   
   </body>
 </html>
