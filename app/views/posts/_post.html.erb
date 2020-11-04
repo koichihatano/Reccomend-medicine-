@@ -1,18 +1,15 @@
-<div>
-<div class="card border-primary mb-3" style="max-width: 50rem;">
-  <div class="card-header"><p>【内容】 <%= post.content %></p>
+<div class="col-md-4 col-sm-6 col-xs-12">
+ <div class="card border-primary mb-3" style="max-width: 50rem;">
+  <div class="card-header"><p><%= post.content %></p>
    <p id="post-<%= post.id %>"></p>
     <% if @liked_post_ids.include?(post.id) %>
       <%= render "like", post: post %>
     <% else %>
       <%= render "dislike", post: post %>
     <% end %>
+    
     <p>
-    <%= link_to "詳細", post %>
-    <% if current_user.id == post.user.id %>
-      <%= link_to "編集", edit_post_path(post) %>
-      <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか？" } %>
-    <% end %>
+    <%= link_to "詳", post, class:"btn-circle-border-simple" %>
   </p></div>
  </div>
 </div>

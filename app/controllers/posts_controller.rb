@@ -36,7 +36,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content)
+    params.permit(:content, :amazonurl)
   end
 
   def set_post

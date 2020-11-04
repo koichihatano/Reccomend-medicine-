@@ -1,5 +1,12 @@
+<div class="new_container">
 <%= form_with model: @post, local: true do |form| %>
-  <%= form.label :content %>
-  <%= form.text_field :content, required: true %>
-  <%= form.submit "送信" %>
+
+  <p class="midashi">つぶやき</p>
+  <input type="text" class="form-control" name="content" value="<%= @post.content %>">
+
+  <p class="midashi">AmazonのURL</p>
+  <input type="text" class="form-control" name="amazonurl" value="<%= @post.amazonurl %>">
+
+  <button type="submit" class="btn btn-primary submit_btn">投稿</button>
 <% end %>
+</div>
