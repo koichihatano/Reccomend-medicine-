@@ -1,13 +1,13 @@
 <div class="col-md-4 col-sm-6 col-xs-12">
  <div class="card border-primary mb-3" style="max-width: 50rem;">
   <div class="card-header"><p><%= post.content %></p>
-   <p id="post-<%= post.id %>"></p>
+   <p id="post-<%= post.id %>">
     <% if @liked_post_ids.include?(post.id) %>
       <%= render "like", post: post %>
     <% else %>
       <%= render "dislike", post: post %>
     <% end %>
-    
+    </p>
     <p>
     <%= link_to "詳", post, class:"btn-circle-border-simple" %>
   </p></div>
